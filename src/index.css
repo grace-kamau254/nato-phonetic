@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.body{
+    font-size: 1.6rem;
+}
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(147, 146, 143); 
+  }
+  
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .input {
+    padding: 1rem;
+    width: 30rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+  }
+  
+  .reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: .5rem;
+    background-color: skyblue;
+  }
+  .reset:hover{
+    background-color:lightcoral;
+  }
+  
+  .phonetic {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  

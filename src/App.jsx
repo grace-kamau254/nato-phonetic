@@ -1,90 +1,56 @@
-import { useState } from "react";
-const natoPhonetic = {
-  "a":"alpha"  
- "b": "bravo"  
-"c": "charlie"   
-"d": "delta",
-"e": "echo", 
-"f": "foxtrot",  
-"g": "golf",  
-"h": "hotel",  
-"i": "india",  
-"j": "juliett",  
-"k": "kilo",
-"l": "lima"  
-"m": "mike"  
-"n": "november" 
-"o": "oscar"  
-p": "papa"   
-"q": "quebec"  
-"r": "romeo"   
-"s": "sierra"  
-"t": "tango" 
-"u": "uniform"   
-"v": "victor"   
-"w": "whiskey"  
-"x": "xray"   
-"y": "yankee"   
-"z": "zulu"   
-"0": "zero"   
-"1": "one"   
-"2": "two"   
-"3": "three"  
-"4": "four"   
-"5": "five",  
-"6": "six",  
-"7": "seven",
-"8": "eight",
-"9": "nine",
-"!": "exclamation mark",  
-" - "double quote"  
-"#": "hash",
-"$": "dollar sign"  
-"%": "percent sign"  
-"&" :"ampersand" 
-"'":"apostrophe" 
-"(": "left parenthesis"  
-")": "right parenthesis"  
-"*":"asterisk" 
-"+" : "plus sign"  
-"," :"comma"  
-"-":"hyphen"  
- ".": "period"  
-"/" :"slash"  
-":" : "colon"  
-";" : "semicolon"  
-"<" : "less than"  
-"=" : "equals sign"  
-">" : "greater than"  
-? : "question mark"  
-@ : "at symbol"  
-[ : "left square bracket"  
-\ : 'backslash'  
-] : "right square bracket"  
-^ : "caret"  
- _: "underscore" 
-` : "grave accent"  
-{ : "left curly brace"  
-| : "vertical bar"  
-} : "right curly brace"  
-~ : 'tilde'  
+import React, { useState } from 'react';
+import './index.css';
 
-}
-const phoneticTranslator = () => {
-  const [text, setText] = useState("");
-  const [phonetic, setPhonetic] = useState("");
-  
+const natoPhonetic = {
+  a: 'Alpha', b: 'Bravo', c: 'Charlie', d: 'Delta', e: 'Echo',
+  f: 'Foxtrot', g: 'Golf', h: 'Hotel', i: 'India', j: 'Juliett',
+  k: 'Kilo', l: 'Lima', m: 'Mike', n: 'November', o: 'Oscar',
+  p: 'Papa', q: 'Quebec', r: 'Romeo', s: 'Sierra', t: 'Tango',
+  u: 'Uniform', v: 'Victor', w: 'Whiskey', x: 'X-ray', y: 'Yankee',
+  z: 'Zulu', '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three',
+  '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight',
+  '9': 'Nine', '!': 'Exclamation Mark', '"': 'Double Quote', '#': 'Hash',
+  '$': 'Dollar Sign', '%': 'Percent Sign', '&': 'Ampersand', "'": 'Apostrophe',
+  '(': 'Left Parenthesis', ')': 'Right Parenthesis', '*': 'Asterisk',
+  '+': 'Plus Sign', ',': 'Comma', '-': 'Hyphen', '.': 'Period',
+  '/': 'Slash', ':': 'Colon', ';': 'Semicolon', '<': 'Less Than',
+  '=': 'Equals Sign', '>': 'Greater Than', '?': 'Question Mark',
+  '@': 'At Symbol', '[': 'Left Square Bracket', '\\': 'Backslash',
+  ']': 'Right Square Bracket', '^': 'Caret', '_': 'Underscore',
+  '`': 'Grave Accent', '{': 'Left Curly Brace', '|': 'Vertical Bar',
+  '}': 'Right Curly Brace', '~': 'Tilde'
+};
+
+const PhoneticTranslator = () => {
+  const [text, setText] = useState('');
+  const [phonetic, setPhonetic] = useState('');
+
   const handleChange = (event) => {
-    setText(event.target.value);
-    setPhonetic(natoPhonetic[event.target.value]);
+    const inputText = event.target.value.toLowerCase();
+    setText(inputText);
+    const phoneticArray = inputText.split('').map((char) => natoPhonetic[char] || char);
+    setPhonetic(phoneticArray.join(' '));
   };
+
   const handleReset = () => {
-    setText("");
-    setPhonetic("");
+    setText('');
+    setPhonetic('');
   };
+
   return (
     <div className="container">
-      <h1 className="title">NATO PHONETIC ALPHABET</h1>
-      <input type="text" onChange={handleChange} value={input}Placeholder="Enter yor text here..."className="input" />
+      <h1 className="title">NATO Phonetic Alphabet Translator</h1>
+      <input
+        type="text"
+        onChange={handleChange}
+        value={text}
+        placeholder="Enter your text here..."
+        className="input"
+      />
       <button onClick={handleReset} className="reset">Reset</button>
-      < className="phonetic">{Convert text to NATO PHONETIC AlPHABET}</h2>
+      <h2 className="phonetic">{phonetic}</h2>
+    </div>
+  );
+};
+
+export default PhoneticTranslator;
