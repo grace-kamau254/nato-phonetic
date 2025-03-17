@@ -9,16 +9,16 @@ const natoPhonetic = {
   u: 'Uniform', v: 'Victor', w: 'Whiskey', x: 'X-ray', y: 'Yankee',
   z: 'Zulu', '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three',
   '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight',
-  '9': 'Nine', '!': 'Exclamation Mark', '"': 'Double Quote', '#': 'Hash',
-  '$': 'Dollar Sign', '%': 'Percent Sign', '&': 'Ampersand', "'": 'Apostrophe',
-  '(': 'Left Parenthesis', ')': 'Right Parenthesis', '*': 'Asterisk',
-  '+': 'Plus Sign', ',': 'Comma', '-': 'Hyphen', '.': 'Period',
-  '/': 'Slash', ':': 'Colon', ';': 'Semicolon', '<': 'Less Than',
-  '=': 'Equals Sign', '>': 'Greater Than', '?': 'Question Mark',
-  '@': 'At Symbol', '[': 'Left Square Bracket', '\\': 'Backslash',
-  ']': 'Right Square Bracket', '^': 'Caret', '_': 'Underscore',
-  '`': 'Grave Accent', '{': 'Left Curly Brace', '|': 'Vertical Bar',
-  '}': 'Right Curly Brace', '~': 'Tilde'
+  '9': 'Nine', '!': '"Exclamation Mark"', '"': '"Double Quote"', '#': '"Hash"',
+  '$': '"Dollar Sign"', '%': '"Percent Sign"', '&': '"Ampersand"', "'": '"Apostrophe"',
+  '(': '"Left Parenthesis"', ')': '"Right Parenthesis"', '*': '"Asterisk"',
+  '+': '"Plus Sign"', ',': '"Comma"', '-': '"Hyphen"', '.': '"Period"',
+  '/': '"Slash"', ':': '"Colon"', ';': '"Semicolon"', '<': '"Less Than"',
+  '=': '"Equals Sign"', '>': '"Greater Than"', '?': '"Question Mark"',
+  '@': '"At Symbol"', '[': '"Left Square Bracket"', '\\': '"Backslash"',
+  ']': '"Right Square Bracket"', '^': '"Caret"', '_': '"Underscore"',
+  '`': '"Grave Accent"', '{': '"Left Curly Brace"', '|': '"Vertical Bar"',
+  '}': '"Right Curly Brace"', '~': '"Tilde"'
 };
 
 const PhoneticTranslator = () => {
